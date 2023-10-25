@@ -5,7 +5,7 @@ import validateResource from "../middlewares/validateResource";
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send("Hello Test route!");
+  res.send("Hello Restaurant  route!");
 });
 
 export default router;
