@@ -6,8 +6,12 @@ import { errorHandler, notFoundHandler } from "./middlewares/errors";
 import validateResource from "./middlewares/validateResource";
 import testRoute from "./routes/testroute";
 import connectDB from "./config/db";
+import corsOptions from "./config/corsOptions";
+import cors from "cors";
+
 const app = express();
 
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // app.use(compression());
