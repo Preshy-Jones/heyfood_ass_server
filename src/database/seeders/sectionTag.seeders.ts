@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Tag = require("../../models/tags.ts");
+const SectionTag = require("../../models/sectionTag.ts");
 require("dotenv").config();
 
 // connect to mongo db
@@ -21,23 +21,16 @@ const closeConnection = function () {
 // Drop tables
 const drop = {
   // List the models to drop
-  async Tags() {
-    return Tag.deleteMany({});
+  async SectionTags() {
+    return SectionTag.deleteMany({});
   },
 };
 
 const seed = {
   // Product seeder
-  async Tags() {
-    const tagsPayload = tags.map((tag) => {
-      return {
-        title: tag.name,
-        iconUrl: tag.iconUrl,
-      };
-    });
-
+  async SectionTags() {
     //save tags
-    await Tag.insertMany(tagsPayload);
+    await SectionTag.insertMany(sectionTags);
 
     // console.log(shops);
   },
@@ -47,10 +40,10 @@ const run = async function () {
   // Start Connection
   await connect();
   // List models to drop
-  await drop.Tags();
+  await drop.SectionTags();
 
   // List models to seed
-  await seed.Tags();
+  await seed.SectionTags();
 
   // End Connection
   await closeConnection();

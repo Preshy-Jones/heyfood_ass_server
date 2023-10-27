@@ -1,5 +1,7 @@
-import mongoose from "mongoose";
-import { nanoid } from "nanoid";
+// import mongoose from "mongoose";
+// import { nanoid } from "nanoid";
+const { nanoid } = require("nanoid");
+const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
@@ -15,6 +17,8 @@ const sectionTagSchema = new Schema({
   },
 });
 
-const SectionTag = mongoose.model("sectiontag", sectionTagSchema);
+// const SectionTag = mongoose.model("sectiontag", sectionTagSchema);
 
-export default SectionTag;
+// export default SectionTag;
+
+module.exports = mongoose.model("sectiontag", sectionTagSchema);
