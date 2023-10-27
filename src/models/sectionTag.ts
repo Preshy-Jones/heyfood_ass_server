@@ -15,6 +15,6 @@ const sectionTagSchema = new Schema({
   },
 });
 
-const Tag = mongoose.model("sectiontag", sectionTagSchema);
+const SectionTag = mongoose.model("sectiontag", sectionTagSchema);
 
-export default Tag;
+export default SectionTag;
