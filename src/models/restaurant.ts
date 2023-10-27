@@ -25,6 +25,10 @@ const restaurantSchema = new Schema({
     type: [String],
     ref: "tag",
   },
+  sectionTag: {
+    type: String,
+    ref: "sectiontag",
+  },
 });
 
 
