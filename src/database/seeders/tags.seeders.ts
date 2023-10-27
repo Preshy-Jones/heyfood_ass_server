@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
-const Tag = require("../models/tag.ts");
+const Tag = require("../../models/tags.ts");
 require("dotenv").config();
-const { v4: uuidv4 } = require("uuid");
 
 // connect to mongo db
 const mongoUri = process.env.MONGO_URI;

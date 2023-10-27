@@ -1,5 +1,7 @@
-import mongoose from "mongoose";
-import { nanoid } from "nanoid";
+//import mongoose from "mongoose";
+// import { nanoid } from "nanoid";
+const { nanoid } = require("nanoid");
+const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
@@ -19,6 +21,8 @@ const tagSchema = new Schema({
   },
 });
 
-const Tag = mongoose.model("tag", tagSchema);
+//const Tag = mongoose.model("tag", tagSchema);
 
-export default Tag;
+// export default Tag;
+
+module.exports = mongoose.model("tag", tagSchema);
